@@ -73,7 +73,8 @@ plt.savefig("sleep_plot.png")
 plt.legend()
 plt.show()
 
-#imade a change
+print("HJI")
+print("UPDATED CODE")
 with open("metrics.txt", "a") as file:
     file.write(f"{average}\n")
     file.write(f"{min}\n")
