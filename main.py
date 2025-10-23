@@ -4,7 +4,6 @@ import matplotlib
 matplotlib.use('TkAgg')  # Choose a GUI backend that usually shows windows
 import matplotlib.pyplot as plt 
 
-
 # Unbelievably simple first step: printing out sleep data.
 # I have no idea how to even build a project, so this is literally scooping clay. 
 # Not even making a brick yet, much less placing it down. 
@@ -37,7 +36,6 @@ print(f"Total amount of sleep I got: {total}")
 if 'total' in globals():
     print("it is")
 
-
 # plotting
 x_val_min = 0
 x_val_max = 0
@@ -62,16 +60,19 @@ plt.plot(days, sleep_data, marker = 'o', color = 'red', label = 'Actual Sleep Da
 plt.title(f"slepe over {len(days)} days")
 plt.xlabel("days")
 plt.ylabel("hours of sleep")
+
 # Ideal sleep line plot
 plt.plot(days, good_sleep_line, marker = 'o', color = 'blue', label = 'Ideal Sleep Line')
 plt.text(x_val_max, y_val_max, "Max Value")
 plt.text(x_val_min, y_val_min, "Min Value")
+
 # Average sleep gotten line plot
 plt.plot(days, average_list, marker = 'o', label = 'Average Sleep')
 plt.grid()
 plt.savefig("sleep_plot.png")
 plt.legend()
 plt.show()
+
 
 print("HJI")
 print("UPDATED CODE")
